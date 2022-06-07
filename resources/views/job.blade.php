@@ -1,3 +1,5 @@
+{{-- Job view for displaying job details and notes --}}
+
 @include ('partials.head')
 
 <h1>Job Details</h1>
@@ -53,7 +55,7 @@
         <button class="w-20" type="submit">Save Note</button>
     </form>
     @foreach($job->notes as $note)
-    <div class="note">
+    <div class="note" id="note-{{$note->id}}">
         <form id="form-{{$note->id}}" action="/jobs/{{$job->code}}/note/{{$note->id}}" method="post" class="d-none w-100">
             @csrf
             <textarea name="note" class="w-80">{{$note->note}}</textarea>

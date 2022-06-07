@@ -1,3 +1,5 @@
+{{-- Head view, for defining HTML structure and head --}}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,4 +17,4 @@
 </head>
 
 <body>
-    <div class="container">
+    <main class="container">

@@ -19,6 +19,9 @@ class JobNote extends Model
         'note',
     ];
 
+    /**
+     * Defines belongs to job relationship
+     */
     public function job()
     {
         return $this->belongsTo(Job::class);

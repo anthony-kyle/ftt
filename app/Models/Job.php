@@ -18,11 +18,17 @@ class Job extends Model
         'status'
     ];
 
+    /**
+     * Defines the belongs to user relationship
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * Defines the has many notes relationship
+     */
     public function notes()
     {
         return $this->hasMany(JobNote::class);

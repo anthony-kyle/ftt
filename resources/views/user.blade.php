@@ -1,3 +1,5 @@
+{{-- User View, displays user information and job list --}}
+
 @include ('partials.head')
 
 <h1>Tradie Details</h1>

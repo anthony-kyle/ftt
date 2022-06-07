@@ -1,3 +1,9 @@
+/**
+ * app.css
+ * Stylesheet for Fergus Technical Test
+ */
+
+/* Define Root element variables */
 :root {
     --font-family: "Montserrat", sans-serif;
     --font-weight-normal: 400;
@@ -9,6 +15,7 @@
     --clr-subtext: rgba(23, 23, 23, 0.3);
 }
 
+/* Layout styles */
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-body);
@@ -23,6 +30,7 @@ body {
     width: min(1024px, 80%);
 }
 
+/* Information table style */
 .info {
     display: flex;
     flex-direction: column;
@@ -40,6 +48,7 @@ body {
     width: 20%;
 }
 
+/* Form Styles */
 form {
     margin: 1rem 0px;
     display: flex;
@@ -60,6 +69,7 @@ textarea {
     min-height: 50px;
 }
 
+/* Note Styles */
 .note {
     display: block;
     border-bottom: solid 1px var(--clr-subtext);
@@ -77,6 +87,7 @@ textarea {
     min-width: 150px;
 }
 
+/* Helper classes */
 .w-10 {
     width: 10%;
 }
@@ -124,6 +135,7 @@ textarea {
     display: none;
 }
 
+/* Responsive styles */
 @media (max-width: 720px) {
     .info__row {
         flex-direction: column;
