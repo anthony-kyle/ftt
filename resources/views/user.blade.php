@@ -37,6 +37,23 @@
     </div>
 </section>
 
-
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Job Code</th>
+            <th>Job Name</th>
+            <th>Job Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($user->jobs as $job)
+        <tr>
+            <td>{{$job->code}}</td>
+            <td>{{$job->name}}</td>
+            <td>{{$job->status}}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
 
 @include('partials.foot')
