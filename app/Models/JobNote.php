@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Job extends Model
+class JobNote extends Model
 {
     use HasFactory;
 
@@ -15,16 +15,12 @@ class Job extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'status'
+        'job_id',
+        'note',
     ];
 
-    public function user()
+    public function job()
     {
-        return $this->belongsTo(User::class);
-    }
-
-    public function notes()
-    {
-        return $this->hasMany(JobNote::class);
+        return $this->belongsTo(Job::class);
     }
 }

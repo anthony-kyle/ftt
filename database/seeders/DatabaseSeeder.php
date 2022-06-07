@@ -18,11 +18,12 @@ class DatabaseSeeder extends Seeder
     {
 
         $count = 0;
-        while ($count < 10){
+        while ($count < 10) {
             $user = User::factory()->create();
 
-            for ($i = 1001; $i < 1100; $i++){
-                Job::factory()->create(['user_id'=>$user->id, 'code'=>strval($i)]);
+            for ($i = 1001; $i < 1100; $i++) {
+                $jobCode = strtoupper($user->job_prefix . strval($i));
+                Job::factory()->create(['user_id' => $user->id, 'code' => $jobCode]);
             }
             $count++;
         }

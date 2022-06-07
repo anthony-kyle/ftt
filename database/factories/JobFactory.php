@@ -24,7 +24,7 @@ class JobFactory extends Factory
             'description' => $this->faker->sentence(),
             'contact_name' => $this->faker->name(),
             'contact_phone' => $this->faker->phoneNumber(),
-            'address' => $this->faker->address()         
+            'address' => $this->faker->address()
         ];
     }
 }

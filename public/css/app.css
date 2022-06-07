@@ -5,6 +5,8 @@
     --font-size-body: 1.2rem;
     --font-size-heading: 1.8rem;
 
+    --clr-text: rgba(23, 23, 23, 1);
+    --clr-subtext: rgba(23, 23, 23, 0.3);
 }
 
 body {
@@ -24,11 +26,13 @@ body {
 .info {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .info__row {
     display: flex;
     width: 100%;
+    margin-bottom: 0.5rem;
 }
 
 .info__row--title {
@@ -36,9 +40,96 @@ body {
     width: 20%;
 }
 
+form {
+    margin: 1rem 0px;
+    display: flex;
+}
+
+textarea,
+input,
+button,
+select {
+    font-family: var(--font-family);
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    margin: 0px;
+}
+
+textarea {
+    height: auto;
+    min-height: 50px;
+}
+
+.note {
+    display: block;
+    border-bottom: solid 1px var(--clr-subtext);
+}
+
+.note__display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.note--edited {
+    font-size: 0.8rem;
+    text-align: right;
+    color: var(--clr-subtext);
+    min-width: 150px;
+}
+
+.w-10 {
+    width: 10%;
+}
+.w-20 {
+    width: 20%;
+}
+.w-30 {
+    width: 30%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-60 {
+    width: 60%;
+}
+.w-70 {
+    width: 70%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-90 {
+    width: 90%;
+}
+.w-100 {
+    width: 100%;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.success {
+    color: rgb(46, 133, 46);
+    transition: opacity 500ms ease-in-out;
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.d-none {
+    display: none;
+}
+
 @media (max-width: 720px) {
     .info__row {
         flex-direction: column;
     }
 
+    .info__row--title {
+        width: 100%;
+    }
 }
