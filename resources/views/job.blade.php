@@ -12,7 +12,7 @@
         <div class="info__row--detail">{{$job->code}}</div>
     </div>
     <div class="info__row">
-        <div class="info__row--title">Name:</div>
+        <div class="info__row--title">Job Name:</div>
         <div class="info__row--detail">{{$job->name}}</div>
     </div>
     <div class="info__row">
@@ -22,6 +22,10 @@
     <div class="info__row">
         <div class="info__row--title">Job Site Address:</div>
         <div class="info__row--detail">{{$job->address}}</div>
+    </div>
+    <div class="info__row">
+        <div class="info__row--title">Job Created Date:</div>
+        <div class="info__row--detail">{{$job->created_at->format('d/m/Y h:m a')}}</div>
     </div>
     <div class="info__row">
         <div class="info__row--title">Site Contact:</div>
