@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         while ($count < 10){
             $user = User::factory()->create();
 
-            for ($i = 1001; $i < 1010; $i++){
+            for ($i = 1001; $i < 1100; $i++){
                 Job::factory()->create(['user_id'=>$user->id, 'code'=>strval($i)]);
             }
             $count++;
