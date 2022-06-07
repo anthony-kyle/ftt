@@ -1,0 +1,23 @@
+:root {
+    --font-family: "Montserrat", sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-size-body: 1.2rem;
+    --font-size-heading: 1.8rem;
+
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight)
+    background-color: #efefef;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 10px auto;
+    width: min(1024px, 80%);
+    display: flex;
+}
