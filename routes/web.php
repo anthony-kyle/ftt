@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+        'users' => User::all()
+    ]);
+});
+
+Route::prefix('/users')->group(function(){
+    Route::get('{user}', function (User $user){
+        return view('user', ['user'=> $user->load('jobs')]);
+    });
 });

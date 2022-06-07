@@ -9,8 +9,8 @@
 
 body {
     font-family: var(--font-family);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight)
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-normal);
     background-color: #efefef;
     margin: 0;
     padding: 0;
@@ -19,5 +19,26 @@ body {
 .container {
     margin: 10px auto;
     width: min(1024px, 80%);
+}
+
+.info {
     display: flex;
+    flex-direction: column;
+}
+
+.info__row {
+    display: flex;
+    width: 100%;
+}
+
+.info__row--title {
+    font-weight: var(--font-weight-bold);
+    width: 20%;
+}
+
+@media (max-width: 720px) {
+    .info__row {
+        flex-direction: column;
+    }
+
 }
