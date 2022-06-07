@@ -33,6 +33,7 @@
             <th>Job Code</th>
             <th>Job Name</th>
             <th>Job Status</th>
+            <th>Job Created</th>
         </tr>
     </thead>
     <tbody>
@@ -41,6 +42,7 @@
             <td><a href="/jobs/{{$job->code}}">{{$job->code}}</a></td>
             <td>{{$job->name}}</td>
             <td>{{$job->status}}</td>
+            <td>{{$job->created_at->format('d/m/y h:m a')}}
         </tr>
         @endforeach
     </tbody>
