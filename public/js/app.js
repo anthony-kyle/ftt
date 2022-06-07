@@ -104,7 +104,7 @@ function deleteNote(e) {
 
   fetch(`/jobs/${jobCode}/note/${noteId}`, options)
     .then(res => {
-      if (res.status === 200) document.querySelector(`#note-${noteId}`).remove();
+      if (res.status === 200) document.querySelector(`#note-wrapper-${noteId}`).remove();
     })
     .catch(err => console.error(err))
 }
