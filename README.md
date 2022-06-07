@@ -12,10 +12,16 @@ Run the below code to clone the repository, enter it, and install it with seed d
 
 
 ```bash
-git clone https://github.com/anthony-kyle/ftt.git
-cd ./ftt
+git clone https://github.com/anthony-kyle/ftt.git akm-technical-test
+cd ./akm-technical-test
 cp .env.example .env
 composer install
 ./vendor/bin/sail up -d
-./vendor/bin/artisan migrate --seed
 ```
+
+Once the above is running successfully, migrate and seed the database
+```bash
+./vendor/bin/sail artisan migrate --seed
+```
+
+View the running system http://localhost:8081
